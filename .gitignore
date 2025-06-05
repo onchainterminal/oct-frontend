@@ -1,0 +1,27 @@
+# IDE
+.idea
+.vscode
+
+# Node
+node_modules
+
+# Nuxt
+.nuxt
+.nitro
+.cache
+.output
+
+# Tmp
+dist
+.tmp
+.data
+*.bkp
+*.log
+
+# OS
+.DS_Store
+
+# Local env
+.env
+.env.*
+!.env.example

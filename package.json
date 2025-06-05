@@ -1,0 +1,55 @@
+{
+  "name": "platform-next",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "nuxt build",
+    "dev": "nuxt dev",
+    "generate": "nuxt generate",
+    "postinstall": "nuxt prepare",
+    "lint-staged": "lint-staged",
+    "prepare": "husky",
+    "preview": "nuxt preview"
+  },
+  "lint-staged": {
+    "*.{js,ts,vue}": [
+      "prettier --write",
+      "eslint --fix"
+    ]
+  },
+  "dependencies": {
+    "@clickhouse/client": "^1.11.1",
+    "nuxt": "^3.17.5",
+    "tailwindcss": "^4.1.8",
+    "vue": "^3.5.16",
+    "vue-router": "^4.5.1"
+  },
+  "devDependencies": {
+    "@eslint/js": "latest",
+    "@nuxt/devtools": "latest",
+    "@nuxt/eslint": "latest",
+    "@nuxt/test-utils": "latest",
+    "@nuxtjs/device": "latest",
+    "@nuxtjs/i18n": "latest",
+    "@nuxtjs/tailwindcss": "latest",
+    "@prettier/plugin-pug": "latest",
+    "eslint": "latest",
+    "eslint-config-prettier": "latest",
+    "globals": "latest",
+    "husky": "latest",
+    "lint-staged": "latest",
+    "nuxt-gtag": "latest",
+    "nuxt-lodash": "latest",
+    "nuxt-quasar-ui": "latest",
+    "nuxt-swiper": "latest",
+    "nuxt-viewport": "latest",
+    "prettier": "latest",
+    "prettier-plugin-jsdoc": "latest",
+    "prettier-plugin-packagejson": "latest",
+    "prettier-plugin-sh": "latest",
+    "prettier-plugin-sort-json": "latest",
+    "pug": "latest",
+    "sass": "latest",
+    "typescript-eslint": "latest"
+  }
+}
