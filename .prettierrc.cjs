@@ -1,12 +1,12 @@
 // Opinionated code formatter which removes all original styling
 // and ensures that all outputted code conforms to a consistent
 // style by reprinting the parsed AST with its own rules.
-// © Prettier <https://prettier.io>
+// Learn more at: https://prettier.io
 
-// Defines config.
+// Defines configuration.
 const config = {};
 
-// External plugins.
+// Add external formatting plugins.
 config.plugins = [
   '@prettier/plugin-pug',
   'prettier-plugin-jsdoc',
@@ -15,45 +15,45 @@ config.plugins = [
   'prettier-plugin-sort-json'
 ];
 
-// Read editorconfig.
+// Respect .editorconfig settings.
 config.editorconfig = true;
 
-// Consistent quotes.
+// Use consistent quotation style.
 config.quoteProps = 'consistent';
 
-// Single quotes for string.
+// Prefer single quotes for string literals.
 config.singleQuote = true;
 
-// Closing bracket position.
+// Place closing brackets on same line as last element.
 config.bracketSameLine = true;
 
-// No commas on multi-line.
+// Remove trailing commas in multiline structures.
 config.trailingComma = 'none';
 
-// Indent script and style.
+// Apply indentation to Vue <script> and <style> tags.
 config.vueIndentScriptAndStyle = true;
 
-// Sort Json props recursively.
+// Enable deep sorting of JSON object properties.
 config.jsonRecursiveSort = true;
 
-// Framework using pug engine.
+// Set Vue.js as the template framework.
 config.pugFramework = 'vue';
 
-// Pug attribute double quotes.
+// Use double quotes for Pug attributes.
 config.pugSingleQuote = false;
 
-// Pug attribute wrap threshold.
+// Wrap attributes when more than one.
 config.pugWrapAttributesThreshold = 1;
 
-// Pug single file component indent.
+// Enable proper Single File Component indentation.
 config.pugSingleFileComponentIndentation = true;
 
-// Resolve plugins from node directory.
+// Resolve plugin paths relative to this configuration file.
 config.plugins = config.plugins.map((plugin) =>
   require.resolve(plugin, {
     paths: [__dirname + '/node_modules']
   })
 );
 
-// Export prettier config used by IDE.
+// Export configuration for use by Prettier and IDE.
 module.exports = config;

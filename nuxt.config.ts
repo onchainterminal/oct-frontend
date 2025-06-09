@@ -1,20 +1,13 @@
 import { defineNuxtConfig, type NuxtConfig } from 'nuxt/config';
 
-// Defines config.
+// Defines configuration.
 const config: NuxtConfig = {};
 
 // Register Nuxt modules.
-config.modules = [
-  '@nuxtjs/tailwindcss',
-  '@nuxtjs/i18n',
-  'nuxt-viewport',
-  'nuxt-quasar-ui',
-  'nuxt-lodash',
-  'nuxt-swiper'
-];
+config.modules = ['@nuxtjs/i18n', '@nuxtjs/device', '@nuxt/ui-pro', 'nuxt-viewport', 'nuxt-lodash'];
 
-// Static css files to load.
-config.css = ['quasar/css'];
+// Static CSS files to load.
+config.css = ['~/assets/css/main.css'];
 
 // Dev tools settings.
 config.devtools = {
@@ -32,7 +25,13 @@ config.i18n = {
 config.nitro = {
   experimental: {
     websocket: true
-  }
+  },
+  serverAssets: [
+    {
+      baseName: 'sql',
+      dir: './storage/queries'
+    }
+  ]
 };
 
 // Register Nuxt future.

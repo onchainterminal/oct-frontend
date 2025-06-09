@@ -1,3 +1,3 @@
-# Don't allow merge changes to generated files, because
-# result may be invalid. Need to run "pnpm install" again.
+# Treat bun.lock as text during merge to prevent conflicts in the lockfile.
+# After pulling changes, run 'pnpm install' to regenerate the lockfile correctly.
 pnpm-lock.yaml                    merge=text

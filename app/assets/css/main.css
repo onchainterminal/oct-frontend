@@ -1,0 +1,11 @@
+@import 'tailwindcss';
+@import '@nuxt/ui-pro';
+
+@theme {
+  --font-sans: 'Tohoma', sans-serif;
+}
+
+.u-border {
+  border-color: var(--ui-border);
+  border-style: dashed;
+}

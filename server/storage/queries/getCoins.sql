@@ -1,0 +1,1 @@
+SELECT name, symbol, uri, mint FROM pumpfun_create_coin LIMIT 10;

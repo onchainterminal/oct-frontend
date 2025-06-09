@@ -1,6 +1,5 @@
 <template lang="pug">
-  .app
-    | Hello
+  NuxtPage
 </template>
 
 <script setup lang="ts"></script>

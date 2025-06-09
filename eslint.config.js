@@ -1,16 +1,16 @@
 // ESLint is a tool for identifying and reporting on patterns
 // found in ECMAScript/JavaScript code, with the goal of making
 // code more consistent and avoiding bugs.
-// © ESLint <https://eslint.org>
+// Learn more at: https://eslint.org
 
 import globals from 'globals';
 import eslintJs from '@eslint/js';
 import eslintTs from 'typescript-eslint';
 import eslintPretty from 'eslint-config-prettier';
 
-// Export ESLint config used by IDE.
+// Export configuration for use by ESLint and IDE.
 export default eslintTs.config(
-  { ignores: ['**/.nuxt', '**/dist'] },
+  { ignores: ['**/.nuxt', '**/dist', 'public/**'] },
   { languageOptions: { globals: globals.node } },
   ...[eslintJs.configs.recommended, eslintPretty],
   ...eslintTs.configs.recommended,

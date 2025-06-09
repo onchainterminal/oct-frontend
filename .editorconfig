@@ -1,36 +1,34 @@
 # EditorConfig helps maintain consistent coding styles for multiple
 # developers working on the project across various editors and IDEs.
-# © EditorConfig <https://editorconfig.org>
+# Learn more at: https://editorconfig.org
 root = true
 
 [*]
-# Character encoding.
+# Sets UTF-8 character set for proper text encoding.
 charset = utf-8
 
-# Line ending.
+# Uses LF line endings for cross-platform compatibility.
 end_of_line = lf
 
-# Indentation size.
+# Defines spacing preferences for better code readability.
 indent_size = 2
-
-# Indentation style.
 indent_style = space
 
-# End file with newline.
+# Ensures files end with newline for POSIX compliance.
 insert_final_newline = true
 
-# Max line length to wrap on.
+# Limits line length to improve code readability.
 max_line_length = 120
 
-# Trim whitespace at end of line.
+# Removes unnecessary whitespace at line endings.
 trim_trailing_whitespace = true
 
-[*.md]
-# Not limited max line length.
+[*.{md,sql}]
+# Disables line length limit for better content authoring.
 max_line_length = off
 
-# Do not end file with newline.
+# Preserves file formatting without adding final newline.
 insert_final_newline = false
 
-# Whitespace is allowed at end of line.
+# Preserves trailing whitespace for Markdown line breaks.
 trim_trailing_whitespace = false
